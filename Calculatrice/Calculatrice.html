@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" href="calculatrice.css" />
+	<meta name="viewport" content="width=device-width" />
+	<script src="calculatrice.js"></script>
+	<title>Calculatrice</title>
+</head>
+
+<body>
+	<div id="calculatrice">
+		<header>
+			<h2>Calculatrice</h2>
+		</header>
+
+		<div id="affichage">
+			<!--écrand'affichage du résultat actuel et des précédent-->
+			<textarea id="previusResult" readonly rows="3" cols="2"></textarea>
+			<!--<p type="text" class ="responsive" id="previusResult">affiche les oppération précédendes</p>-->
+			<textarea id="saisie" readonly rows="1" cols="2" minlength="0" maxlength="7"></textarea>
+		</div>
+
+		<div id="correcteur">
+			<input type="button" id="reset" class="button" value="reset" onclick="reset()" />
+			<!--Efface l'intégralité de previusResult-->
+			<input type="button" id="c" class="button" value="c" onclick="clr()" />
+			<!--Efface result-->
+		</div>
+		<div id="toucheEntree">
+
+			<div id="numbers">
+				<!--creation d'un bouton et d'une valeur pour chacun -->
+				<input type="button" class="button" value="1" onclick="dis(1)" />
+				<input type="button" class="button" value="2" onclick="dis(2)" />
+				<input type="button" class="button" value="3" onclick="dis(3)" />
+				<input type="button" class="button" value="4" onclick="dis(4)" />
+				<input type="button" class="button" value="5" onclick="dis(5)" />
+				<input type="button" class="button" value="6" onclick="dis(6)" />
+				<input type="button" class="button" value="7" onclick="dis(7)" />
+				<input type="button" class="button" value="8" onclick="dis(8)" />
+				<input type="button" class="button" value="9" onclick="dis(9)" />
+				<input type="button" class="button" value="0" onclick="dis(0)" />
+			</div>
+			<div id="operators">
+
+				<div id="blocOppe">
+					<input type="button" class="button" value="+" onclick="dis('+')" />
+					<input type="button" class="button" value="-" onclick="dis('-')" />
+					<input type="button" class="button" value="*" onclick="dis('*')" />
+					<input type="button" class="button" value="/" onclick="dis('/')" />
+				</div>
+
+				<div id="selfButton">
+					<input type="button" id="egal" class="button" value="=" onclick="solve()" />
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+</body>
+
+</html>
